@@ -1,0 +1,15 @@
+pkgname=tea-coreutils
+pkgver=1.33.0
+pkgrel=1
+pkgdesc='A version of the BusyBox Coreutils'
+arch=('x86_64')
+license=('GPL')
+md5sums=('7319c3c477c335813e1a518b10c40753')
+source=("./$pkgname-$pkgver.tar.xz")
+package() 
+		{
+			cp -r $srcdir/* $pkgdir	
+			cd $pkgdir
+			rm $pkgname-$pkgver.tar.xz
+		}
+
